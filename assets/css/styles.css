@@ -1,143 +1,167 @@
 /* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Fraunces:wght@700&display=swap');
 
 /* Root */
 :root {
-  /* Colors */
-  --primary-color-cyan: hsl(158, 36%, 37%);
-  --primary-color-cream: hsl(30, 38%, 92%);
-  --secondary-color-dark-blue: hsl(212, 21%, 14%);
-  --secondary-color-gray-blue: hsl(228, 12%, 48%);
-  --secondary-color-white: hsl(0, 0%, 100%);
+    /* Colors */
+    --color-primary: hsl(158, 36%, 37%);
+    --color-primary-dark: hsl(158, 36%, 27%);
+    --color-background: hsl(30, 38%, 92%);
+    --color-text-dark: hsl(212, 21%, 14%);
+    --color-text-light: hsl(228, 12%, 48%);
+    --color-white: hsl(0, 0%, 100%);
 
-/* Typography */
-    --font-family-montserrat: "Montserrat", sans-serif;
-    --font-family-fraunces: "Fraunces", serif;
-    --font-size-body: 0.9rem;
+    /* Typography */
+    --font-body: "Montserrat", sans-serif;
+    --font-heading: "Fraunces", serif;
+    --font-size-base: 0.9rem;
 
-  /* Font weights */
-  --font-weight-regular: 500;
-  --font-weight-bold: 700;
+    /* Font weights */
+    --font-weight-regular: 500;
+    --font-weight-bold: 700;
 }
 
 /* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-  
+
 /* Body */
-  body {
+body {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    font-family: var(--font-family-fraunces);
-    background-color: var(--primary-color-cream);
-  }
-
-/* Content */
-.wrapper {
-    background-color: var(--secondary-color-white);
-    border-radius: 0.5rem;
-    max-width: 90vw;
-    height: auto;
-}
-
-img {
- max-width: 100%;
-  height: auto;
-  border-radius: 0.5rem 0.5rem 0 0;
-}
-
-.content {
+    font-family: var(--font-body);
+    background-color: var(--color-background);
     padding: 1rem;
 }
 
- h2 {
-  font-family: var(--font-family-montserrat) !important;
-  margin-bottom: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.25rem;
-  color: var(--secondary-color-gray-blue);
-  font-size: var(--font-size-body);
-  font-weight: var(--font-weight-regular);
-}
-
-h1 {
-  padding-bottom: 1rem;
-}
-
- .info {
-  padding: 0.125rem;
-  color: var(--secondary-color-gray-blue);
-  font-family: var(--font-family-montserrat) !important;
-  font-weight: var(--font-weight-regular);
-  padding-bottom: 1rem;
-  line-height: 1.5rem;
-  font-size: var(--font-size-body);
-}
-
-.prices-container {
-  display: flex; 
-}
-
-.prices {
-  display: flex;
-  flex-direction: row;
-}
-
-.sale-price {
-  color: var(--primary-color-cyan);
-  font-weight: var(--font-weight-bold);
-  margin-right: 1rem;
-}
-
-.normal-price {
-  text-decoration: line-through;
-  color: var(--secondary-color-gray-blue);
-  display: flex;
-  align-items: center;
-  margin-bottom: 1rem;
-}
-
-.button {
-    width: 80%;
-    height: auto;
-    padding: 1rem;
+/* Product Card */
+.product-card {
+    background-color: var(--color-white);
     border-radius: 0.5rem;
-    border: 0;
-    background-color: var(--primary-color-cyan);
-    color: var(--secondary-color-white);
+    max-width: 345px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product-img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.product-details {
+    padding: 1.5rem;
+}
+
+.product-category {
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    color: var(--color-text-light);
+    font-size: var(--font-size-base);
+    margin-bottom: 1rem;
+}
+
+.product-name {
+    font-family: var(--font-heading);
+    color: var(--color-text-dark);
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.product-description {
+    color: var(--color-text-light);
+    line-height: 1.6;
+    font-size: var(--font-size-base);
+    margin-bottom: 1.5rem;
+}
+
+.product-pricing {
     display: flex;
-    flex-direction: row;  
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.current-price {
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+    font-weight: var(--font-weight-bold);
+    font-size: 2rem;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: var(--color-text-light);
+}
+
+.add-to-cart {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    display: flex;
     justify-content: center;
-    font-weight: var(--font-weight-bold); 
+    align-items: center;
+    font-weight: var(--font-weight-bold);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.button-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.add-to-cart:hover,
+.add-to-cart:focus {
+    background-color: var(--color-primary-dark);
 }
 
-.button img {
-  margin-right: 1rem;
+.add-to-cart img {
+    margin-right: 0.5rem;
 }
 
 /* Attribution */
 .attribution {
-  flex-shrink: 0;
-  width: 100%;
-  font-size: 11px;
-  text-align: center;
-  padding: 1rem 0;
-  background-color: var(--primary-color-cream);
+    font-size: 11px;
+    text-align: center;
+    padding: 1rem 0;
+    width: 100%;
+    margin-top: 2rem;
 }
 
 .attribution a {
-  color: hsl(228, 45%, 44%);
+    color: var(--color-primary);
+}
+
+@media screen and (min-width: 768px) {
+    .product-card {
+        display: flex;
+        max-width: 600px;
+    }
+
+    .product-image,
+    .product-details {
+        flex: 1;
+    }
+
+    .product-img {
+        content: url("../images/image-product-desktop.jpg");
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .product-details {
+        padding: 2rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .product-card {
+        max-width: 700px;
+    }
 }
