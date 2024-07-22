@@ -159,7 +159,7 @@ body {
     }
 
     .product-details {
-        margin: 1rem;
+        margin: 0rem 1rem 0rem 1rem;
         padding: 0rem;
     }
 }
@@ -167,5 +167,16 @@ body {
 @media screen and (min-width: 1024px) {
     .product-card {
         max-width: 700px;
+    }
+
+.product-description {
+    line-height: 1.5rem;
+    letter-spacing: 2px;
+}
+    .product-pricing {
+        margin-top: 2rem;
+    }
+    .add-to-cart {
+        margin-top: 2rem;
     }
 }
