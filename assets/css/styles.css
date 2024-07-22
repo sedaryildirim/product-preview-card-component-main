@@ -142,6 +142,8 @@ body {
     .product-card {
         display: flex;
         max-width: 600px;
+        justify-content: center;
+        align-items: center;
     }
 
     .product-image,
@@ -156,7 +158,8 @@ body {
     }
 
     .product-details {
-        padding: 2rem;
+        margin: 1rem;
+        padding: 0rem;
     }
 }
 
