@@ -45,7 +45,6 @@
     border-radius: 0.5rem;
     max-width: 90vw;
     height: auto;
-    margin-top: -6rem;
 }
 
 img {
@@ -58,9 +57,51 @@ img {
     padding: 1rem;
 }
 
-h2,h1 {
-    font-family: var(--font-family-fraunces);
-    margin-bottom: 1rem;
+ h2 {
+  font-family: var(--font-family-montserrat) !important;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  color: var(--secondary-color-gray-blue);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+}
+
+h1 {
+  padding-bottom: 1rem;
+}
+
+ .info {
+  padding: 0.125rem;
+  color: var(--secondary-color-gray-blue);
+  font-family: var(--font-family-montserrat) !important;
+  font-weight: var(--font-weight-regular);
+  padding-bottom: 1rem;
+  line-height: 1.5rem;
+  font-size: var(--font-size-body);
+}
+
+.prices-container {
+  display: flex; 
+}
+
+.prices {
+  display: flex;
+  flex-direction: row;
+}
+
+.sale-price {
+  color: var(--primary-color-cyan);
+  font-weight: var(--font-weight-bold);
+  margin-right: 1rem;
+}
+
+.normal-price {
+  text-decoration: line-through;
+  color: var(--secondary-color-gray-blue);
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
 }
 
 .button {
@@ -72,21 +113,31 @@ h2,h1 {
     background-color: var(--primary-color-cyan);
     color: var(--secondary-color-white);
     display: flex;
-    flex-direction: row;   
+    flex-direction: row;  
+    justify-content: center;
+    font-weight: var(--font-weight-bold); 
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button img {
+  margin-right: 1rem;
 }
 
 /* Attribution */
 .attribution {
-    font-size: 11px;
-    text-align: center;
-    color: var(--color-white);
-    margin-top: 2rem;
-    position: fixed;
-    bottom: 2rem;
-    left: 0;
-    right: 0;
-  }
-  
-  .attribution a {
-    color: hsl(228, 45%, 44%);
-  }
+  flex-shrink: 0;
+  width: 100%;
+  font-size: 11px;
+  text-align: center;
+  padding: 1rem 0;
+  background-color: var(--primary-color-cream);
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
